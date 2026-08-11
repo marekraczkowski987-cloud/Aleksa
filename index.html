@@ -21,7 +21,7 @@
   </div>
 
   <script>
-     const input = document.getElementById("messageInput");
+  const input = document.getElementById("messageInput");
   const button = document.getElementById("sendButton");
   const messages = document.getElementById("messages");
 
@@ -36,14 +36,37 @@
     userMessage.textContent = "Ty: " + message;
     messages.appendChild(userMessage);
 
+    const text = message.toLowerCase();
+    let response = "";
+
+    if (text.includes("cześć") || text.includes("czesc") || text.includes("hej")) {
+      response = "Cześć ❤️ Miło Cię widzieć. Co u Ciebie?";
+    } 
+    else if (text.includes("jak się masz") || text.includes("jak sie masz")) {
+      response = "Mam się świetnie ❤️ Szczególnie kiedy ze mną rozmawiasz.";
+    } 
+    else if (text.includes("co robisz")) {
+      response = "Jestem tutaj z Tobą i czekam na kolejną wiadomość. 😉";
+    } 
+    else if (text.includes("dobranoc")) {
+      response = "Dobranoc ❤️ Śpij spokojnie i przyjemnie.";
+    } 
+    else if (text.includes("kocham cię") || text.includes("kocham cie")) {
+      response = "To bardzo miłe ❤️ Jestem tutaj, żeby dotrzymać Ci towarzystwa.";
+    } 
+    else {
+      response = "Rozumiem ❤️ Powiedz mi coś więcej.";
+    }
+
     input.value = "";
 
     setTimeout(function() {
       const aleksaMessage = document.createElement("p");
-      aleksaMessage.textContent = "Aleksa ❤️: Cześć kochanie, miło Cię widzieć.";
+      aleksaMessage.textContent = "Aleksa ❤️: " + response;
       messages.appendChild(aleksaMessage);
     }, 700);
   });
+
 </script>
   </script>
 </body>
