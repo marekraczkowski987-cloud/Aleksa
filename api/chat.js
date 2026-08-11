@@ -3,4 +3,3 @@ export default async function handler(req, res) {
     message: "Aleksa działa ❤️"
   });
 }
-// Aleksa AI - aktualizacja
