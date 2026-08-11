@@ -5,15 +5,28 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #2b102f, #6b214f);
+  background: linear-gradient(135deg, #180b24, #6b214f, #b84d78);
   color: white;
   text-align: center;
 }
 
+.container {
+  width: 90%;
+  max-width: 500px;
+  padding: 40px 25px;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 30px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
 h1 {
   font-size: 42px;
+  margin-bottom: 15px;
 }
 
 p {
   font-size: 20px;
+  opacity: 0.9;
 }
