@@ -106,3 +106,6 @@ p {
   background: white;
   color: #6b214f;
 }
+body {
+  background: red !important;
+}
